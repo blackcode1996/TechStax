@@ -11,12 +11,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           <a href="/">
-            <img
-              src={logoC}
-              height="100"
-              width="100"
-              alt="techstax.ml"
-            />
+            <img src={logoC} height="100" width="100" alt="techstax.ml" />
           </a>
 
           <div className="flex items-center space-x-3">
@@ -38,7 +33,8 @@ const Navbar = () => {
               type="button"
               className="px-4 py-2 text-sm text-white bg-red-500 hover:bg-red-600 rounded-md"
               onClick={() => {
-                localStorage.clear();
+                localStorage.removeItem("userData");
+                localStorage.removeItem("token");
                 navigate("/login");
               }}
             >
