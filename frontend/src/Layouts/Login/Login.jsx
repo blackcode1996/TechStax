@@ -42,7 +42,7 @@ const Login = () => {
 
     if (Object.keys(newErrors).length === 2) {
       try {
-        let response = await axios.post("https://worldref-nine.vercel.app/user/login", formData);
+        let response = await axios.post("https://tech-stax-g9kr.vercel.app/user/login", formData);
         toast.success("Login successful");
         localStorage.setItem("userData", JSON.stringify(response.data.userData));
         localStorage.setItem("token", JSON.stringify(response.data.token));

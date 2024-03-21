@@ -38,7 +38,7 @@ const Signup = () => {
       setIsSubmitting(true);
       try {
         const response = await fetch(
-          "https://worldref-nine.vercel.app/user/register",
+          "https://tech-stax-g9kr.vercel.app/user/register",
           {
             method: "POST",
             headers: {

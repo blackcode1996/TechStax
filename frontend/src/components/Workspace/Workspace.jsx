@@ -65,6 +65,7 @@ const Workspace = ({
         fitView
         fitViewOptions={{ padding: 2 }}
         nodeOrigin={[0.5, 0]}
+        defaultEdgeOptions={{deletable:true}}
       >
         <Background variant={BackgroundVariant.Dots} />
         <MiniMap />
