@@ -53,7 +53,7 @@ const Home = () => {
       setWorkspaces([
         {
           id: 1,
-          logo: {calender},
+          logo: calender,
           name: "Workspace 1",
           nodes: initialNodes,
           edges: [],
@@ -61,7 +61,7 @@ const Home = () => {
       ]);
       setSelectedWorkspace({
         id: 1,
-        logo: {calender},
+        logo: calender,
         name: "Workspace 1",
       });
     }
@@ -94,7 +94,7 @@ const Home = () => {
     const newWorkspaceId = workspaces.length + 1;
     const newWorkspace = {
       id: newWorkspaceId,
-      logo: "./src/assets/Calendar.png",
+      logo: calender,
       name: `Workspace ${newWorkspaceId}`,
       data: initialNodes,
     };
