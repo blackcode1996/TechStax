@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import logo from "../../assets/logo.png"
+import control from "../../assets/control.png"
 
 const Sidebar = ({
   workspaces,
@@ -20,7 +22,7 @@ const Sidebar = ({
         {/* Sidebar Header */}
         <div className="flex gap-x-4 items-center">
           <img
-            src="./src/assets/logo.png"
+            src={logo}
             className={`cursor-pointer duration-500 ${
               open && "rotate-[360deg]"
             }`}
@@ -35,7 +37,7 @@ const Sidebar = ({
         </div>
         {/* Toggle Button */}
         <img
-          src="./src/assets/control.png"
+          src={control}
           className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple border-2 rounded-full  ${
             !open && "rotate-180"
           }`}

@@ -38,12 +38,12 @@ const Home = () => {
   }, [selectedWorkspace, loadWorkspaceData]);
 
   useEffect(() => {
-    const workspaceKeys = Object.keys(localStorage).filter(key =>
+    const workspaceKeys = Object.keys(localStorage).filter((key) =>
       key.startsWith("Workspace")
     );
-  
+
     if (workspaceKeys.length > 0) {
-      const savedWorkspaces = workspaceKeys.map(key =>
+      const savedWorkspaces = workspaceKeys.map((key) =>
         JSON.parse(localStorage.getItem(key))
       );
       setWorkspaces(savedWorkspaces);
@@ -52,7 +52,7 @@ const Home = () => {
       setWorkspaces([
         {
           id: 1,
-          logo: "./src/assets/Calendar.png",
+          logo: "../../assets/Calendar.png",
           name: "Workspace 1",
           nodes: initialNodes,
           edges: [],
@@ -65,7 +65,6 @@ const Home = () => {
       });
     }
   }, []);
-  
 
   const handleClickWorkspace = (workspace) => {
     setSelectedWorkspace(workspace);
