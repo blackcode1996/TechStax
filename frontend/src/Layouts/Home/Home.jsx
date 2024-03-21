@@ -3,6 +3,7 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import Workspace from "../../components/Workspace/Workspace";
 import { useEdgesState, useNodesState, useReactFlow, addEdge } from "reactflow";
 import { convertCSVtoJSON } from "../../Utils/csvUtils";
+import calender from "../../assets/Calendar.png";
 
 const Home = () => {
   const initialNodes = [
@@ -52,7 +53,7 @@ const Home = () => {
       setWorkspaces([
         {
           id: 1,
-          logo: "../../assets/Calendar.png",
+          logo: {calender},
           name: "Workspace 1",
           nodes: initialNodes,
           edges: [],
@@ -60,7 +61,7 @@ const Home = () => {
       ]);
       setSelectedWorkspace({
         id: 1,
-        logo: "./src/assets/Calendar.png",
+        logo: {calender},
         name: "Workspace 1",
       });
     }
